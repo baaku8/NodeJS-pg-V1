@@ -1,0 +1,8 @@
+10:27:01 pm : from the path /
+10:27:01 pm : from the path /.well-known/appspecific/com.chrome.devtools.json
+10:27:02 pm : from the path /favicon.ico10:28:03 pm : from the path /
+10:28:03 pm : from the path /.well-known/appspecific/com.chrome.devtools.json
+10:28:04 pm : from the path /favicon.ico
+10:28:46 pm : from the path /baaku
+10:28:46 pm : from the path /.well-known/appspecific/com.chrome.devtools.json
+10:28:47 pm : from the path /favicon.ico

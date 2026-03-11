@@ -1,0 +1,14 @@
++   Node JS is a runtime environment for JS which is created combining the V8 engine and C++, primarily to run javascipt
+    outside the browser.Now we can run js as a server-side language. Also js can talk to native machines as it is build from 
+    cpp which has this feature. As we have extracted the JS runtime from the browser, so we no longer have any DOM. Window and
+    other browser objects and terminologies.
+
++   We can run JS in our terminal (REPL--Read Eval Print Loop) using the command "node"
+    for multi line commands we can use the command ".editor" after "node"
+
++   Npm is a package manager of NodeJS which provides various open source packages and it is installed by default with Node.
+
++   We initialize any project with npm init , which initializes the npm and creates a "package.json" configuration file which has 
+    all the configurations and scripts to run the project.
+
++   

@@ -1,0 +1,26 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "node",
+  "keywords": [
+    "node",
+    "baaku"
+  ],
+  "homepage": "https://github.com/baaku8/NodeJS-pg-V1#readme",
+  "bugs": {
+    "url": "https://github.com/baaku8/NodeJS-pg-V1/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baaku8/NodeJS-pg-V1.git"
+  },
+  "license": "ISC",
+  "author": "Piyush Chatterjee",
+  "type": "module",
+  "main": "hello.js",
+  "scripts": {
+    "start": "node hello",
+    "devlec4": "node lec4-modules/usage.js",
+    "devlec5": "node lec5-file-handling/file.js"
+  }
+}
