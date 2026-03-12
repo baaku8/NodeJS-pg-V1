@@ -21,6 +21,12 @@
   "scripts": {
     "start": "node hello",
     "devlec4": "node lec4-modules/usage.js",
-    "devlec5": "node lec5-file-handling/file.js"
+    "devlec5": "node lec5-file-handling/file.js",
+    "devlec8": "node lec8-url/index.js",
+    "devlec10": "node lec10-express index.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "url": "^0.11.4"
   }
 }
