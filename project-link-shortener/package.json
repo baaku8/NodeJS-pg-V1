@@ -1,0 +1,19 @@
+{
+  "name": "project-link-shortener",
+  "version": "1.0.0",
+  "description": "my first fully build project",
+  "license": "ISC",
+  "author": "Piyush Chatterjee",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index"
+  },
+  "dependencies": {
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "mongoose": "^9.3.0",
+    "nanoid": "^5.1.6",
+    "nodemon": "^3.1.14"
+  }
+}
