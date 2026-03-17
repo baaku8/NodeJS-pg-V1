@@ -33,8 +33,11 @@ const handleUserLogin=async(req,res)=>{
         return res.render("login",{error:"Invalid username or password"});
     }else{
        const token=setUser(user);
-       res.cookie("authToken",token)
-       return res.redirect('/url');
+    //    res.cookie("authToken",token)
+        // console.log("token",token);
+        // req.headers["authorization"]=token;
+    //    return res.redirect('/url');
+       return res.json({token})
     }
 
 }

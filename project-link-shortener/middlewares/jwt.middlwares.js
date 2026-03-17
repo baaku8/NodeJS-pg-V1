@@ -18,17 +18,19 @@ const getUser = (token) => {
 }
 
 const restrictLogin = async (req, res, next) => {
-    console.log("Cookies received:", req.cookies); // DEBUG: See if cookies are actually being parsed
-    
-    const userid = req.cookies?.authToken;
-    console.log("User ID from cookie:", userid); // DEBUG: Check if 'uid' exists
-
+    // console.log("Cookies received:", req.cookies); 
+    // console.log("headers: ",req.headers["authorization"])
+    // const userid = req.cookies?.authToken;
+      const userid=req.headers["authorization"];
+    //   console.log(userid);
+    // console.log("User ID from cookie:", userid);
     if (!userid) {
         console.log("No cookie found, redirecting...");
         return res.redirect('/user/login');
     }
-
-    const user = getUser(userid);
+    const token=userid.split(" ")[1]; 
+    // const user = getUser(userid);
+    const user=getUser(token);
     if (!user) {
         console.log("Invalid token, redirecting...");
         return res.redirect('/user/login');
