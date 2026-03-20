@@ -1,6 +1,7 @@
 import { randomBytes } from "crypto";
+import { createUserToken } from "../services/authentication.services.js";
 import mongoose from "mongoose";
-import {createHmac} from 'crypto';
+import { createHmac } from "node:crypto";
 const UserSchema=new mongoose.Schema({
     fullName:{
         type:String,
@@ -20,7 +21,7 @@ const UserSchema=new mongoose.Schema({
     },
     profileImageUrl:{
         type:String,
-        default:"/images/defaultProfileImage.png"
+        default:"/public/images/defaultProfileImage.jpg"
     },
     role:{
         type:String,
@@ -60,7 +61,9 @@ UserSchema.static("matchPassword",async function(email,password){
             .update(password)
             .digest('hex');
     if(hashedPassword!==userProvidedHash) throw new Error("incorrect Password");
-    return user;
+    const token=createUserToken(user);
+
+    return token;
 })
 
 

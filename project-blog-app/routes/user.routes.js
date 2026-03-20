@@ -12,6 +12,8 @@ router.get('/signup',(req,res)=>{
 
 router.post('/signup',async(req,res)=>{
     const {fullName,email,password}=req.body;
+    const user= await User.findOne({email});
+    if(user) return res.render('signup',{error:"Email already exist"});
     await User.create({
         fullName,
         email,
@@ -21,13 +23,19 @@ router.post('/signup',async(req,res)=>{
 })
 
 router.post('/signin',async(req,res)=>{
-    const {email,password}=req.body;
-    const user=User.matchPassword(email,password);
-    console.log("user: ",user);
-    res.redirect('/')
+        const {email,password}=req.body;
+    try {
+        const token=await User.matchPassword(email,password);
+        return res.cookie("authToken",token).redirect('/');
+    } catch (error) {
+        return res.render("signin",{error:"Incorrect email or password"});
+        
+    }
 })
 
-
+router.get('/logout',(req,res)=>{
+     return res.clearCookie("authToken").redirect('/');
+})
 
 
 
